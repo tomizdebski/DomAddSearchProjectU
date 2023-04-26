@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="form-container">
+        <form class="form form--add">
+            <h1 class="form__title">Dodaj element do DOM</h1>
+            <input type="text" class="form__input" placeholder="element html" required>
+            <input type="text" class="form__input" placeholder="tekst w el html" required>
+            <input type="text" class="form__input" placeholder="atrybut html" required>
+            <input type="text" class="form__input" placeholder="wartosc atrybutu" required>
+            <button class="form__button">Dodaj element</button>
+        </form>
+        <form class="form form--search">
+            <h1 class="form__title">Przeszukaj DOM</h1>
+            <input type="text" class="form__input" required placeholder="szukana nazwa elementu">
+            <input type="submit" class="form__button" value="Znajdź i pokaz informacje">
+        </form>
+
+    </div>
+     <div class="result"></div>
+     <div class="content"></div>
+     <footer class="footer">Stopka</footer>
+    <script src="main.js"></script>
 </body>
 </html>
