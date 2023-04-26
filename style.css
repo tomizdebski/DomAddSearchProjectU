@@ -43,6 +43,22 @@ body {
     flex-basis: 60%;
     cursor: pointer;
 }
+
+.result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+.result__number-info{
+    grid-column: 1/-1;
+    text-align: center;
+}
+.result__element-description {
+    border: 2px solid red;
+    padding: 10px;
+}
 .result, .content, .footer {
     max-width: 1200px;
     margin: 0 auto;

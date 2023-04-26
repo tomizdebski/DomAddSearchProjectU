@@ -16,19 +16,35 @@ const addElement = (e, node, txt, attr, value) => {
 const searchElements = (e, nameElement) => {
     e.preventDefault();
     const infoElement = document.querySelector('.result');
+    infoElement.textContent = ''; //zerowanie
     const elements = document.querySelectorAll(nameElement);
     console.log(elements);
     if(elements.length) {
-        infoElement.innerHTML = `<p class="result__info">W tym dokumencie znalazłem ${elements.length} elementów ${nameElement}</p>`
+        infoElement.innerHTML = `<p class="result__number-info">W tym dokumencie znalazłem ${elements.length} elementów ${nameElement}</p>`
         showInfo(elements, infoElement);
     } else {
-        infoElement.innerHTML = `<p class="result__info">W tym dokumencie nie znalazłem elementów ${nameElement}</p>`
+        infoElement.innerHTML = `<p class="result__number-info">W tym dokumencie nie znalazłem elementów ${nameElement}</p>`
     }
 
 }
 
 const showInfo = (elements, infoElement) => {
-    console.log(elements, infoElement);
+    console.log(elements);
+    elements.forEach(element => {
+        const item = document.createElement('div');
+        item.className = 'result__element-description';
+        item.innerHTML = `
+        <div>${element.nodeName}</div>
+        <div>klasa: ${element.className}</div>
+        <div>Wyskosc : ${element.offsetHeight}</div>
+        <div>Szerokosc : ${element.offsetHeight}</div>
+        <div>Odleglosc od lewej krawedzi : ${element.offsetLeft}</div>
+        <div>Odleglosc od górnej krawedzi : ${element.offsetTop}</div>
+        <div>Liczba elementów dzieci : ${element.childElementCount}</div>
+        `;
+        infoElement.appendChild(item);
+        
+    });
 }
 
 // listeners
