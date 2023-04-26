@@ -43,6 +43,27 @@ body {
     flex-basis: 60%;
     cursor: pointer;
 }
+.result, .content, .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px 1px #ddd;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 
